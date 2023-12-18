@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace PersonelTakip
 {
-    public partial class FrmLogin : Form
+    public partial class FrmPersonelListesi : Form
     {
-        public FrmLogin()
+        public FrmPersonelListesi()
         {
             InitializeComponent();
+        }
+
+        private void btnKapat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void txtUserNo_KeyPress(object sender, KeyPressEventArgs e)
@@ -25,17 +30,7 @@ namespace PersonelTakip
             }
         }
 
-        private void btnKapat_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void txtUserNo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
+        private void btnAra_Click(object sender, EventArgs e)
         {
 
         }

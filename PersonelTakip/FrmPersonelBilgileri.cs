@@ -10,11 +10,29 @@ using System.Windows.Forms;
 
 namespace PersonelTakip
 {
-    public partial class FrmLogin : Form
+    public partial class FrmPersonelBilgileri : Form
     {
-        public FrmLogin()
+        public FrmPersonelBilgileri()
         {
             InitializeComponent();
+        }
+
+        private void btnKapat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void txtMaas_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))  //İlgili Textbox'a harf girişi engelleme için.
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtUserNo_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void txtUserNo_KeyPress(object sender, KeyPressEventArgs e)
@@ -23,21 +41,6 @@ namespace PersonelTakip
             {
                 e.Handled = true;
             }
-        }
-
-        private void btnKapat_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void txtUserNo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
