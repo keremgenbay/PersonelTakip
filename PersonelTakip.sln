@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonelTakip", "PersonelTakip\PersonelTakip.csproj", "{386AB818-8CFC-4E59-B507-542D4858E38D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{2C1973C3-1C4F-4E00-8203-D68EE28F2A6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{130AFFD9-2680-44DB-8909-6087D53174DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{386AB818-8CFC-4E59-B507-542D4858E38D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{386AB818-8CFC-4E59-B507-542D4858E38D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{386AB818-8CFC-4E59-B507-542D4858E38D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{386AB818-8CFC-4E59-B507-542D4858E38D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C1973C3-1C4F-4E00-8203-D68EE28F2A6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C1973C3-1C4F-4E00-8203-D68EE28F2A6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C1973C3-1C4F-4E00-8203-D68EE28F2A6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C1973C3-1C4F-4E00-8203-D68EE28F2A6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{130AFFD9-2680-44DB-8909-6087D53174DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{130AFFD9-2680-44DB-8909-6087D53174DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{130AFFD9-2680-44DB-8909-6087D53174DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{130AFFD9-2680-44DB-8909-6087D53174DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BAFBA547-6C53-43D2-85C7-DF9C4ACFE896}
+	EndGlobalSection
+EndGlobal
