@@ -48,6 +48,7 @@
             this.btnPersonel.TabIndex = 0;
             this.btnPersonel.Text = "Personel İşlemleri";
             this.btnPersonel.UseVisualStyleBackColor = false;
+            this.btnPersonel.Click += new System.EventHandler(this.btnPersonel_Click);
             // 
             // btnIs
             // 
@@ -59,6 +60,7 @@
             this.btnIs.TabIndex = 1;
             this.btnIs.Text = "İşler";
             this.btnIs.UseVisualStyleBackColor = false;
+            this.btnIs.Click += new System.EventHandler(this.btnIs_Click);
             // 
             // btnMaas
             // 
@@ -70,6 +72,7 @@
             this.btnMaas.TabIndex = 2;
             this.btnMaas.Text = "Maaş İşlemleri";
             this.btnMaas.UseVisualStyleBackColor = false;
+            this.btnMaas.Click += new System.EventHandler(this.btnMaas_Click);
             // 
             // btnLogOut
             // 
@@ -81,6 +84,7 @@
             this.btnLogOut.TabIndex = 6;
             this.btnLogOut.Text = "Çıkış Yap";
             this.btnLogOut.UseVisualStyleBackColor = false;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // btnDepartman
             // 
@@ -92,6 +96,7 @@
             this.btnDepartman.TabIndex = 4;
             this.btnDepartman.Text = "Departman İşlemleri";
             this.btnDepartman.UseVisualStyleBackColor = false;
+            this.btnDepartman.Click += new System.EventHandler(this.btnDepartman_Click);
             // 
             // btnPozisyon
             // 
@@ -103,6 +108,7 @@
             this.btnPozisyon.TabIndex = 5;
             this.btnPozisyon.Text = "Pozisyon İşlemleri";
             this.btnPozisyon.UseVisualStyleBackColor = false;
+            this.btnPozisyon.Click += new System.EventHandler(this.btnPozisyon_Click);
             // 
             // btnIzin
             // 
@@ -114,6 +120,7 @@
             this.btnIzin.TabIndex = 3;
             this.btnIzin.Text = "İzin İşlemleri";
             this.btnIzin.UseVisualStyleBackColor = false;
+            this.btnIzin.Click += new System.EventHandler(this.btnIzin_Click);
             // 
             // btnKapat
             // 
@@ -143,6 +150,7 @@
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menü";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMain_FormClosed);
             this.ResumeLayout(false);
 
         }

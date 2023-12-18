@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PersonelTakip
 {
-    public partial class FrmPersonelListesi : Form
+    public partial class FrmIsListesi : Form
     {
-        public FrmPersonelListesi()
+        public FrmIsListesi()
         {
             InitializeComponent();
         }
@@ -30,14 +30,9 @@ namespace PersonelTakip
             }
         }
 
-        private void btnAra_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            FrmPersonelBilgileri frm=new FrmPersonelBilgileri();
+            FrmIsBilgileri frm= new FrmIsBilgileri();
             this.Hide();
             frm.ShowDialog();
             this.Visible = true;
@@ -45,7 +40,7 @@ namespace PersonelTakip
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-            FrmPersonelBilgileri frm = new FrmPersonelBilgileri();
+            FrmIsBilgileri frm=new FrmIsBilgileri();
             this.Hide();
             frm.ShowDialog();
             this.Visible = true;

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PersonelTakip
 {
-    public partial class FrmPersonelListesi : Form
+    public partial class FrmIzinListesi : Form
     {
-        public FrmPersonelListesi()
+        public FrmIzinListesi()
         {
             InitializeComponent();
         }
@@ -30,14 +30,23 @@ namespace PersonelTakip
             }
         }
 
-        private void btnAra_Click(object sender, EventArgs e)
+        private void txtUserNo_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void txtSure_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))  //İlgili Textbox'a harf girişi engelleme için.
+            {
+                e.Handled = true;
+            }
 
         }
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            FrmPersonelBilgileri frm=new FrmPersonelBilgileri();
+            FrmIzinBilgileri frm=new FrmIzinBilgileri();
             this.Hide();
             frm.ShowDialog();
             this.Visible = true;
@@ -45,7 +54,7 @@ namespace PersonelTakip
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-            FrmPersonelBilgileri frm = new FrmPersonelBilgileri();
+            FrmIzinBilgileri frm = new FrmIzinBilgileri();
             this.Hide();
             frm.ShowDialog();
             this.Visible = true;

@@ -24,7 +24,10 @@ namespace PersonelTakip
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-
+            FrmDepartmanBilgileri frm=new FrmDepartmanBilgileri();
+            this.Hide();
+            frm.ShowDialog();
+            this.Visible = true;
         }
 
         private void btnSil_Click(object sender, EventArgs e)
@@ -34,7 +37,10 @@ namespace PersonelTakip
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-
+            FrmDepartmanBilgileri frm=new FrmDepartmanBilgileri();
+            this.Hide();
+            frm.ShowDialog();
+            this.Visible = true;
         }
     }
 }
