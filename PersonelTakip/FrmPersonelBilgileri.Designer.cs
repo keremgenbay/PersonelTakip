@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.chisAdmin = new System.Windows.Forms.CheckBox();
+            this.btnKontrol = new System.Windows.Forms.Button();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.txtUserNo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnKontrol = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.chisAdmin = new System.Windows.Forms.CheckBox();
             this.txtSoyad = new System.Windows.Forms.TextBox();
             this.txtAd = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -74,6 +74,46 @@
             this.panel1.Size = new System.Drawing.Size(800, 67);
             this.panel1.TabIndex = 0;
             // 
+            // chisAdmin
+            // 
+            this.chisAdmin.AutoSize = true;
+            this.chisAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.chisAdmin.Location = new System.Drawing.Point(653, 18);
+            this.chisAdmin.Name = "chisAdmin";
+            this.chisAdmin.Size = new System.Drawing.Size(68, 22);
+            this.chisAdmin.TabIndex = 3;
+            this.chisAdmin.Text = "Admin";
+            this.chisAdmin.UseVisualStyleBackColor = true;
+            // 
+            // btnKontrol
+            // 
+            this.btnKontrol.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKontrol.Location = new System.Drawing.Point(268, 13);
+            this.btnKontrol.Name = "btnKontrol";
+            this.btnKontrol.Size = new System.Drawing.Size(125, 32);
+            this.btnKontrol.TabIndex = 1;
+            this.btnKontrol.Text = "Kontrol";
+            this.btnKontrol.UseVisualStyleBackColor = true;
+            this.btnKontrol.Click += new System.EventHandler(this.btnKontrol_Click);
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtPassword.Location = new System.Drawing.Point(480, 17);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(135, 23);
+            this.txtPassword.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(417, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 17);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Şifre:";
+            // 
             // txtUserNo
             // 
             this.txtUserNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -93,45 +133,6 @@
             this.label1.Size = new System.Drawing.Size(64, 17);
             this.label1.TabIndex = 4;
             this.label1.Text = "User No:";
-            // 
-            // btnKontrol
-            // 
-            this.btnKontrol.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKontrol.Location = new System.Drawing.Point(268, 13);
-            this.btnKontrol.Name = "btnKontrol";
-            this.btnKontrol.Size = new System.Drawing.Size(125, 32);
-            this.btnKontrol.TabIndex = 1;
-            this.btnKontrol.Text = "Kontrol";
-            this.btnKontrol.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(417, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 17);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Şifre:";
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtPassword.Location = new System.Drawing.Point(480, 17);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(135, 23);
-            this.txtPassword.TabIndex = 2;
-            // 
-            // chisAdmin
-            // 
-            this.chisAdmin.AutoSize = true;
-            this.chisAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.chisAdmin.Location = new System.Drawing.Point(653, 18);
-            this.chisAdmin.Name = "chisAdmin";
-            this.chisAdmin.Size = new System.Drawing.Size(68, 22);
-            this.chisAdmin.TabIndex = 3;
-            this.chisAdmin.Text = "Admin";
-            this.chisAdmin.UseVisualStyleBackColor = true;
             // 
             // txtSoyad
             // 
@@ -209,6 +210,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Seç";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // cmbPozisyon
             // 
@@ -227,6 +229,7 @@
             this.cmbDepartman.Name = "cmbDepartman";
             this.cmbDepartman.Size = new System.Drawing.Size(141, 24);
             this.cmbDepartman.TabIndex = 4;
+            this.cmbDepartman.SelectedIndexChanged += new System.EventHandler(this.cmbDepartman_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -304,6 +307,7 @@
             this.btnKaydet.TabIndex = 8;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.UseVisualStyleBackColor = true;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // label10
             // 
@@ -353,6 +357,7 @@
             this.Name = "FrmPersonelBilgileri";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Personel Bilgileri";
+            this.Load += new System.EventHandler(this.FrmPersonelBilgileri_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
