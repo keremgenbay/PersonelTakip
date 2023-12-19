@@ -113,6 +113,7 @@
             this.Name = "FrmPozisyonListesi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Pozisyon Listesi";
+            this.Load += new System.EventHandler(this.FrmPozisyonListesi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

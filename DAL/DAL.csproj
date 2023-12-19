@@ -42,7 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\DepartmanDAO.cs" />
     <Compile Include="DAO\PersonelDataContext.cs" />
+    <Compile Include="DAO\PozisyonDAO.cs" />
     <Compile Include="PersonelDataClasses.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

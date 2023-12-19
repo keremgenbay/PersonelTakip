@@ -37,5 +37,10 @@ namespace PersonelTakip
             frm.ShowDialog();
             this.Visible = true;
         }
+
+        private void FrmPozisyonListesi_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
