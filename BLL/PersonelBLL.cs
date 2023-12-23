@@ -16,6 +16,7 @@ namespace BLL
             PersonelDTO dto = new PersonelDTO();
             dto.Departmanlar = DepartmanDAO.DepartmanGetir();
             dto.Pozisyonlar = PozisyonDAO.PozisyonGetir();
+            dto.Personeller = PersonelDAO.PersonelGetir();
             
             
             return dto;

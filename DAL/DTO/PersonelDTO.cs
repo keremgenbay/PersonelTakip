@@ -12,5 +12,6 @@ namespace DAL.DTO
     {
         public List<DEPARTMAN> Departmanlar { get; set; }
         public List<PozisyonDTO> Pozisyonlar { get; set; }
+        public List<PersonelDetayDTO> Personeller { get; set; }
     }
 }

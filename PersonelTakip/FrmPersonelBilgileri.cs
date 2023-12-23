@@ -63,7 +63,7 @@ namespace PersonelTakip
             if (dto.Departmanlar.Count > 0)
                 combofull = true;
 
-        }
+        }  
         bool combofull = false;
         private void cmbDepartman_SelectedIndexChanged(object sender, EventArgs e)
         {
