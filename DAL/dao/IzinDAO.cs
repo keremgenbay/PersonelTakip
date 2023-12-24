@@ -109,6 +109,7 @@ namespace DAL.DAO
         {
             try
             {
+
                 IZIN iz = db.IZINs.First(x => x.ID == detaydto.IzinID);
                 iz.Aciklama = detaydto.Aciklama;
                 iz.IzinBaslamaTarihi = detaydto.BaslamaTarihi;
