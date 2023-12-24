@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAL.DTO;
 using BLL;
+using System.IO;
+
+
 namespace PersonelTakip
 {
     public partial class FrmPersonelListesi : Form
@@ -18,57 +21,22 @@ namespace PersonelTakip
             InitializeComponent();
         }
 
-        private void btnKapat_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void txtUserNo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))  //İlgili Textbox'a harf girişi engelleme için.
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
             }
         }
-
-        List<PersonelDetayDTO> listt = new List<PersonelDetayDTO>();
-        private void btnAra_Click(object sender, EventArgs e)
-        {
-            listt = dto.Personeller;
-            if (txtUserNo.Text.Trim() != "")
-                listt = listt.Where(x => x.UserNo == Convert.ToInt32(txtUserNo.Text)).ToList();
-            if (txtAd.Text.Trim() != "")
-                listt = listt.Where(x => x.Ad.Contains(txtAd.Text)).ToList();
-            if (txtSoyad.Text.Trim() != "")
-                listt = listt.Where(x => x.Soyad.Contains(txtSoyad.Text)).ToList();
-            if (cmbDepartman.SelectedIndex != -1)
-                listt = listt.Where(x => x.DepartmanID == Convert.ToInt32(cmbDepartman.SelectedValue)).ToList();
-
-            if (cmbPozisyon.SelectedIndex != -1)
-                listt = listt.Where(x => x.PozisyonID == Convert.ToInt32(cmbPozisyon.SelectedValue)).ToList();
-
-            dataGridView1.DataSource = listt;
-        }
-
-        private void btnEkle_Click(object sender, EventArgs e)
-        {
-            FrmPersonelBilgileri frm=new FrmPersonelBilgileri();
-            this.Hide();
-            frm.ShowDialog();
-            this.Visible = true;
-        }
-
-        private void btnGuncelle_Click(object sender, EventArgs e)
-        {
-            FrmPersonelBilgileri frm = new FrmPersonelBilgileri();
-            this.Hide();
-            frm.ShowDialog();
-            this.Visible = true;
-        }
-        PersonelDTO dto=new PersonelDTO();
+        PersonelDTO dto = new PersonelDTO();
         PersonelDetayDTO detay = new PersonelDetayDTO();
         bool combofull = false;
         private void FrmPersonelListesi_Load(object sender, EventArgs e)
+        {
+            doldur();
+        }
+
+        private void doldur()
         {
             dto = PersonelBLL.GetAll();
             dataGridView1.DataSource = dto.Personeller;
@@ -98,6 +66,37 @@ namespace PersonelTakip
             cmbPozisyon.SelectedIndex = -1;
         }
 
+        private void btnEkle_Click(object sender, EventArgs e)
+        {
+            FrmPersonelBilgileri frm = new FrmPersonelBilgileri();
+            this.Hide();
+            frm.isUpdate = false;
+            frm.ShowDialog();
+
+            this.Visible = true;
+            combofull = false;
+            Temizle();
+            doldur();
+
+
+        }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            FrmPersonelBilgileri frm = new FrmPersonelBilgileri();
+            this.Hide();
+            frm.isUpdate = true;
+            frm.detay = detay;
+            frm.ShowDialog();
+
+
+            this.Visible = true;
+            combofull = false;
+            Temizle();
+            doldur();
+
+        }
+
         private void cmbDepartman_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (combofull)
@@ -107,8 +106,32 @@ namespace PersonelTakip
 
             }
         }
+        List<PersonelDetayDTO> listt = new List<PersonelDetayDTO>();
+        private void btnAra_Click(object sender, EventArgs e)
+        {
+            listt = dto.Personeller;
+            if (txtUserNo.Text.Trim() != "")
+                listt = listt.Where(x => x.UserNo == Convert.ToInt32(txtUserNo.Text)).ToList();
+            if (txtAd.Text.Trim() != "")
+                listt = listt.Where(x => x.Ad.Contains(txtAd.Text)).ToList();
+            if (txtSoyad.Text.Trim() != "")
+                listt = listt.Where(x => x.Soyad.Contains(txtSoyad.Text)).ToList();
+            if (cmbDepartman.SelectedIndex != -1)
+                listt = listt.Where(x => x.DepartmanID == Convert.ToInt32(cmbDepartman.SelectedValue)).ToList();
+
+            if (cmbPozisyon.SelectedIndex != -1)
+                listt = listt.Where(x => x.PozisyonID == Convert.ToInt32(cmbPozisyon.SelectedValue)).ToList();
+
+            dataGridView1.DataSource = listt;
+        }
 
         private void btnTemizle_Click(object sender, EventArgs e)
+        {
+            Temizle();
+
+        }
+
+        private void Temizle()
         {
             txtAd.Clear();
             txtSoyad.Clear();
@@ -117,7 +140,50 @@ namespace PersonelTakip
             cmbPozisyon.DataSource = dto.Pozisyonlar;
             cmbPozisyon.SelectedIndex = -1;
             dataGridView1.DataSource = dto.Personeller;
+        }
 
+        private void dataGridView1_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            detay.PersonelID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
+            detay.Ad = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            detay.Soyad = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            detay.UserNo = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[1].Value);
+            detay.DepartmanID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[6].Value);
+            detay.PozisyonID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[7].Value);
+            detay.Maas = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[8].Value);
+            detay.password = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
+            detay.isAdmin = Convert.ToBoolean(dataGridView1.Rows[e.RowIndex].Cells[10].Value);
+            detay.Resim = dataGridView1.Rows[e.RowIndex].Cells[11].Value.ToString();
+            detay.Adres = dataGridView1.Rows[e.RowIndex].Cells[12].Value.ToString();
+            detay.DogumTarihi = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells[13].Value);
+
+        }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Silinsinmi", "Dikkat", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                PersonelBLL.PersonelSil(detay.PersonelID);
+                string resimyol = Application.StartupPath + "\\resimler\\" + detay.Resim
+;
+                File.Delete(resimyol);
+                MessageBox.Show("Silindi");
+                combofull = false;
+                Temizle();
+                doldur();
+
+            }
+        }
+
+        private void btnKapat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BtnExcel_Click(object sender, EventArgs e)
+        {
+            ExcelExport.ExportExcel(dataGridView1);
         }
     }
 }

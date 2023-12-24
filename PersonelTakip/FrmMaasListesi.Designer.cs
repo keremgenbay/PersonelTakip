@@ -34,8 +34,8 @@
             this.btnAra = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rbEsit = new System.Windows.Forms.RadioButton();
-            this.rbKücük = new System.Windows.Forms.RadioButton();
-            this.rbBüyük = new System.Windows.Forms.RadioButton();
+            this.rbKucuk = new System.Windows.Forms.RadioButton();
+            this.rbBuyuk = new System.Windows.Forms.RadioButton();
             this.cmbAy = new System.Windows.Forms.ComboBox();
             this.txtYil = new System.Windows.Forms.TextBox();
             this.txtMaas = new System.Windows.Forms.TextBox();
@@ -117,8 +117,8 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.rbEsit);
-            this.groupBox1.Controls.Add(this.rbKücük);
-            this.groupBox1.Controls.Add(this.rbBüyük);
+            this.groupBox1.Controls.Add(this.rbKucuk);
+            this.groupBox1.Controls.Add(this.rbBuyuk);
             this.groupBox1.Location = new System.Drawing.Point(292, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(108, 100);
@@ -135,31 +135,28 @@
             this.rbEsit.TabStop = true;
             this.rbEsit.Text = "Eşit";
             this.rbEsit.UseVisualStyleBackColor = true;
-            this.rbEsit.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // rbKücük
+            // rbKucuk
             // 
-            this.rbKücük.AutoSize = true;
-            this.rbKücük.Location = new System.Drawing.Point(19, 43);
-            this.rbKücük.Name = "rbKücük";
-            this.rbKücük.Size = new System.Drawing.Size(56, 17);
-            this.rbKücük.TabIndex = 1;
-            this.rbKücük.TabStop = true;
-            this.rbKücük.Text = "Küçük";
-            this.rbKücük.UseVisualStyleBackColor = true;
-            this.rbKücük.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.rbKucuk.AutoSize = true;
+            this.rbKucuk.Location = new System.Drawing.Point(19, 43);
+            this.rbKucuk.Name = "rbKucuk";
+            this.rbKucuk.Size = new System.Drawing.Size(56, 17);
+            this.rbKucuk.TabIndex = 1;
+            this.rbKucuk.TabStop = true;
+            this.rbKucuk.Text = "Küçük";
+            this.rbKucuk.UseVisualStyleBackColor = true;
             // 
-            // rbBüyük
+            // rbBuyuk
             // 
-            this.rbBüyük.AutoSize = true;
-            this.rbBüyük.Location = new System.Drawing.Point(19, 20);
-            this.rbBüyük.Name = "rbBüyük";
-            this.rbBüyük.Size = new System.Drawing.Size(55, 17);
-            this.rbBüyük.TabIndex = 0;
-            this.rbBüyük.TabStop = true;
-            this.rbBüyük.Text = "Büyük";
-            this.rbBüyük.UseVisualStyleBackColor = true;
-            this.rbBüyük.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.rbBuyuk.AutoSize = true;
+            this.rbBuyuk.Location = new System.Drawing.Point(19, 20);
+            this.rbBuyuk.Name = "rbBuyuk";
+            this.rbBuyuk.Size = new System.Drawing.Size(55, 17);
+            this.rbBuyuk.TabIndex = 0;
+            this.rbBuyuk.TabStop = true;
+            this.rbBuyuk.Text = "Büyük";
+            this.rbBuyuk.UseVisualStyleBackColor = true;
             // 
             // cmbAy
             // 
@@ -401,6 +398,7 @@
             this.Name = "FrmMaasListesi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Maaş Listesi";
+            this.Load += new System.EventHandler(this.FrmMaasListesi_Load);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -436,7 +434,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton rbBüyük;
+        private System.Windows.Forms.RadioButton rbBuyuk;
         private System.Windows.Forms.ComboBox cmbAy;
         private System.Windows.Forms.TextBox txtYil;
         private System.Windows.Forms.TextBox txtMaas;
@@ -444,7 +442,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.RadioButton rbEsit;
-        private System.Windows.Forms.RadioButton rbKücük;
+        private System.Windows.Forms.RadioButton rbKucuk;
         private System.Windows.Forms.Button btnTemizle;
         private System.Windows.Forms.Button btnAra;
     }

@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.cmbPozisyon = new System.Windows.Forms.ComboBox();
+            this.cmbDepartman = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtSoyad = new System.Windows.Forms.TextBox();
             this.txtAd = new System.Windows.Forms.TextBox();
             this.txtUserNo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmbPozisyon = new System.Windows.Forms.ComboBox();
-            this.cmbDepartman = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.txtMaas = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -50,8 +50,8 @@
             this.btnKapat = new System.Windows.Forms.Button();
             this.btnKaydet = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -63,6 +63,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(204, 450);
             this.panel1.TabIndex = 0;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 173);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(204, 277);
+            this.dataGridView1.TabIndex = 1;
             // 
             // panel2
             // 
@@ -76,14 +85,43 @@
             this.panel2.Size = new System.Drawing.Size(204, 173);
             this.panel2.TabIndex = 0;
             // 
-            // dataGridView1
+            // cmbPozisyon
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 173);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(204, 277);
-            this.dataGridView1.TabIndex = 1;
+            this.cmbPozisyon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmbPozisyon.FormattingEnabled = true;
+            this.cmbPozisyon.Location = new System.Drawing.Point(33, 126);
+            this.cmbPozisyon.Name = "cmbPozisyon";
+            this.cmbPozisyon.Size = new System.Drawing.Size(141, 24);
+            this.cmbPozisyon.TabIndex = 1;
+            // 
+            // cmbDepartman
+            // 
+            this.cmbDepartman.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmbDepartman.FormattingEnabled = true;
+            this.cmbDepartman.Location = new System.Drawing.Point(33, 49);
+            this.cmbDepartman.Name = "cmbDepartman";
+            this.cmbDepartman.Size = new System.Drawing.Size(141, 24);
+            this.cmbDepartman.TabIndex = 0;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(30, 95);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(93, 17);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Pozisyon Adı:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(30, 18);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(106, 17);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Departman Adı:";
             // 
             // txtSoyad
             // 
@@ -141,44 +179,6 @@
             this.label1.Size = new System.Drawing.Size(84, 24);
             this.label1.TabIndex = 20;
             this.label1.Text = "User No:";
-            // 
-            // cmbPozisyon
-            // 
-            this.cmbPozisyon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cmbPozisyon.FormattingEnabled = true;
-            this.cmbPozisyon.Location = new System.Drawing.Point(33, 126);
-            this.cmbPozisyon.Name = "cmbPozisyon";
-            this.cmbPozisyon.Size = new System.Drawing.Size(141, 24);
-            this.cmbPozisyon.TabIndex = 1;
-            // 
-            // cmbDepartman
-            // 
-            this.cmbDepartman.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cmbDepartman.FormattingEnabled = true;
-            this.cmbDepartman.Location = new System.Drawing.Point(33, 49);
-            this.cmbDepartman.Name = "cmbDepartman";
-            this.cmbDepartman.Size = new System.Drawing.Size(141, 24);
-            this.cmbDepartman.TabIndex = 0;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(30, 95);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(93, 17);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Pozisyon Adı:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(30, 18);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 17);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "Departman Adı:";
             // 
             // txtMaas
             // 
@@ -279,10 +279,11 @@
             this.Name = "FrmMaasBilgileri";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Maaş Bilgileri";
+            this.Load += new System.EventHandler(this.FrmMaasBilgileri_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

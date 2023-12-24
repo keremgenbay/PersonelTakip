@@ -47,6 +47,7 @@
             this.btnSil = new System.Windows.Forms.Button();
             this.btnEkle = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnExcel = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -57,6 +58,7 @@
             this.panel1.Controls.Add(this.cmbPozisyon);
             this.panel1.Controls.Add(this.cmbDepartman);
             this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.btnExcel);
             this.panel1.Controls.Add(this.btnTemizle);
             this.panel1.Controls.Add(this.btnAra);
             this.panel1.Controls.Add(this.label4);
@@ -253,6 +255,17 @@
             this.dataGridView1.Size = new System.Drawing.Size(800, 213);
             this.dataGridView1.TabIndex = 2;
             // 
+            // btnExcel
+            // 
+            this.btnExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnExcel.Location = new System.Drawing.Point(370, 82);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(152, 49);
+            this.btnExcel.TabIndex = 6;
+            this.btnExcel.Text = "Excel";
+            this.btnExcel.UseVisualStyleBackColor = true;
+            this.btnExcel.Click += new System.EventHandler(this.btnTemizle_Click);
+            // 
             // FrmPersonelListesi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -294,5 +307,6 @@
         private System.Windows.Forms.Button btnAra;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnTemizle;
+        private System.Windows.Forms.Button btnExcel;
     }
 }

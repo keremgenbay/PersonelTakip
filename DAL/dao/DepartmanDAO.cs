@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,7 +28,36 @@ namespace DAL.DAO
             try
             {
                 return db.DEPARTMANs.ToList();
-                
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public static void departmanSil(int id)
+        {
+            try
+            {
+                DEPARTMAN dp = db.DEPARTMANs.First(x => x.ID == id);
+                db.DEPARTMANs.DeleteOnSubmit(dp);
+                db.SubmitChanges();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public static void DepartmanGuncelle(DEPARTMAN dpt)
+        {
+            try
+            {
+                DEPARTMAN dp = db.DEPARTMANs.First(x => x.ID == dpt.ID);
+                dp.DepartmanAd = dpt.DepartmanAd;
+                db.SubmitChanges();
             }
             catch (Exception ex)
             {

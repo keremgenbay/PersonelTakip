@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace DAL.DTO
 {
-    public class PersonelDetayDTO
+    public class IsDetayDTO
     {
-        public int PersonelID { get; set; }
+
+        public string Baslik { get; set; }
         public int UserNo { get; set; }
         public string Ad { get; set; }
         public string Soyad { get; set; }
@@ -16,11 +17,14 @@ namespace DAL.DTO
         public string PozisyonAd { get; set; }
         public int DepartmanID { get; set; }
         public int PozisyonID { get; set; }
-        public int Maas { get; set; }
-        public string password { get; set; }
-        public bool isAdmin { get; set; }
-        public string Resim { get; set; }
-        public string Adres { get; set; }
-        public DateTime? DogumTarihi { get; set; }
+        public int PersoneID { get; set; }
+        public string Icerik { get; set; }
+        public string IsDurumAd { get; set; }
+        public int IsDurumID { get; set; }
+        public DateTime IsBaslamaTarihi { get; set; }
+        public DateTime IsBitisTarihi { get; set; }
+        public int IsID { get; set; }
+
+
     }
 }

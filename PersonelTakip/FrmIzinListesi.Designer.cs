@@ -315,7 +315,7 @@
             this.txtUserNo.Name = "txtUserNo";
             this.txtUserNo.Size = new System.Drawing.Size(141, 23);
             this.txtUserNo.TabIndex = 0;
-            this.txtUserNo.TextChanged += new System.EventHandler(this.txtUserNo_TextChanged);
+          //  this.txtUserNo.TextChanged += new System.EventHandler(this.txtUserNo_TextChanged);
             this.txtUserNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUserNo_KeyPress);
             // 
             // label3
@@ -445,6 +445,7 @@
             this.Name = "FrmIzinListesi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "İzin Listesi";
+            this.Load += new System.EventHandler(this.FrmIzinListesi_Load);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();

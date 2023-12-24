@@ -409,6 +409,7 @@
             this.Name = "FrmIsListesi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "İş Listesi";
+            this.Load += new System.EventHandler(this.FrmIsListesi_Load);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

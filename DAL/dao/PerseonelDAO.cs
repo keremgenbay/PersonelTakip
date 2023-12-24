@@ -1,9 +1,9 @@
-﻿using DAL.DTO;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DAL.DTO;
 
 namespace DAL.DAO
 {
@@ -11,21 +11,16 @@ namespace DAL.DAO
     {
         public static void PersonelEkle(PERSONEL pr)
         {
-			try
-			{
-				db.PERSONELs.InsertOnSubmit(pr);
-				db.SubmitChanges();
-			}
-			catch (Exception ex)
-			{
+            try
+            {
+                db.PERSONELs.InsertOnSubmit(pr);
+                db.SubmitChanges();
+            }
+            catch (Exception ex)
+            {
 
-				throw ex;
-			}
-        }
-
-        public static List<PERSONEL> PersonelGetir(int v)
-        {
-            return db.PERSONELs.Where(x => x.UserNo == v).ToList();
+                throw ex;
+            }
         }
 
         public static List<PersonelDetayDTO> PersonelGetir()
@@ -73,6 +68,85 @@ namespace DAL.DAO
                 liste.Add(dto);
             }
             return liste;
+        }
+
+        public static void PersonelSil(int personeID)
+        {
+            try
+            {
+
+                PERSONEL pr = db.PERSONELs.First(x => x.ID == personeID);
+                db.PERSONELs.DeleteOnSubmit(pr);
+                db.SubmitChanges();
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public static void PersonelGuncelle(PozisyonDetayDTO detay)
+        {
+            List<PERSONEL> list = db.PERSONELs.Where(x => x.PozisyonID == detay.ID).ToList();
+            foreach (var item in list)
+            {
+                item.DepartmanID = detay.DepartmanID;
+            }
+            db.SubmitChanges();
+        }
+
+        public static void PersonelGuncelle(PersonelDetayDTO pr)
+        {
+            try
+            {
+                PERSONEL per = db.PERSONELs.First(x => x.ID == pr.PersonelID);
+                per.UserNo = pr.UserNo;
+                per.Ad = pr.Ad;
+                per.Adres = pr.Adres;
+                per.DepartmanID = pr.DepartmanID;
+                per.DogumGunu = pr.DogumTarihi;
+                per.isAdmin = pr.isAdmin;
+                per.Maas = pr.Maas;
+                per.Password = pr.password;
+                per.PozisyonID = pr.PozisyonID;
+                per.Resim = pr.Resim;
+                per.Soyad = pr.Soyad;
+                db.SubmitChanges();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public static void PersonelMaasGuncelle(MaasDetayDTO maas)
+        {
+            try
+            {
+                PERSONEL pr = db.PERSONELs.First(x => x.ID == maas.PersoneID);
+                pr.Maas = maas.MaasMiktar;
+                db.SubmitChanges();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public static List<PERSONEL> PersonelGetir(int v, string text)
+        {
+            return db.PERSONELs.Where(x => x.UserNo == v && x.Password == text).ToList();
+        }
+
+        public static List<PERSONEL> PersonelGetir(int v)
+        {
+            return db.PERSONELs.Where(x => x.UserNo == v).ToList();
         }
     }
 }

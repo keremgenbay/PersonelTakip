@@ -35,7 +35,7 @@
             this.btnDepartman = new System.Windows.Forms.Button();
             this.btnPozisyon = new System.Windows.Forms.Button();
             this.btnIzin = new System.Windows.Forms.Button();
-            this.btnKapat = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnPersonel
@@ -122,24 +122,24 @@
             this.btnIzin.UseVisualStyleBackColor = false;
             this.btnIzin.Click += new System.EventHandler(this.btnIzin_Click);
             // 
-            // btnKapat
+            // btnExit
             // 
-            this.btnKapat.BackColor = System.Drawing.Color.Red;
-            this.btnKapat.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKapat.Location = new System.Drawing.Point(576, 230);
-            this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(132, 150);
-            this.btnKapat.TabIndex = 7;
-            this.btnKapat.Text = "Kapat";
-            this.btnKapat.UseVisualStyleBackColor = false;
-            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
+            this.btnExit.BackColor = System.Drawing.Color.Red;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnExit.Location = new System.Drawing.Point(576, 230);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(132, 150);
+            this.btnExit.TabIndex = 7;
+            this.btnExit.Text = "Kapat";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnKapat_Click);
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnKapat);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnIzin);
             this.Controls.Add(this.btnMaas);
@@ -151,6 +151,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menü";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMain_FormClosed);
+            this.Load += new System.EventHandler(this.FrmMain_Load);
             this.ResumeLayout(false);
 
         }
@@ -164,6 +165,6 @@
         private System.Windows.Forms.Button btnDepartman;
         private System.Windows.Forms.Button btnPozisyon;
         private System.Windows.Forms.Button btnIzin;
-        private System.Windows.Forms.Button btnKapat;
+        private System.Windows.Forms.Button btnExit;
     }
 }

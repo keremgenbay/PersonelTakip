@@ -32,8 +32,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dpBaslama = new System.Windows.Forms.DateTimePicker();
+            this.dpBitis = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.txtSure = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -81,21 +81,21 @@
             this.label3.TabIndex = 16;
             this.label3.Text = "İzin Bitiş Tarihi:";
             // 
-            // dateTimePicker1
+            // dpBaslama
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(288, 76);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(171, 27);
-            this.dateTimePicker1.TabIndex = 0;
+            this.dpBaslama.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.dpBaslama.Location = new System.Drawing.Point(288, 76);
+            this.dpBaslama.Name = "dpBaslama";
+            this.dpBaslama.Size = new System.Drawing.Size(171, 27);
+            this.dpBaslama.TabIndex = 0;
             // 
-            // dateTimePicker2
+            // dpBitis
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(288, 132);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(171, 27);
-            this.dateTimePicker2.TabIndex = 1;
+            this.dpBitis.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.dpBitis.Location = new System.Drawing.Point(288, 132);
+            this.dpBitis.Name = "dpBitis";
+            this.dpBitis.Size = new System.Drawing.Size(171, 27);
+            this.dpBitis.TabIndex = 1;
             // 
             // label4
             // 
@@ -163,8 +163,8 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnKapat);
             this.Controls.Add(this.btnKaydet);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dpBitis);
+            this.Controls.Add(this.dpBaslama);
             this.Controls.Add(this.txtBaslik);
             this.Controls.Add(this.txtSure);
             this.Controls.Add(this.txtUserNo);
@@ -176,6 +176,7 @@
             this.Name = "FrmIzinBilgileri";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "İzin Bilgileri";
+            this.Load += new System.EventHandler(this.FrmIzinBilgileri_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,8 +188,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dpBaslama;
+        private System.Windows.Forms.DateTimePicker dpBitis;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtSure;
         private System.Windows.Forms.Label label5;

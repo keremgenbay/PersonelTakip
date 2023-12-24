@@ -43,7 +43,7 @@
             this.txtResim = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSec = new System.Windows.Forms.Button();
             this.cmbPozisyon = new System.Windows.Forms.ComboBox();
             this.cmbDepartman = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -121,7 +121,6 @@
             this.txtUserNo.Name = "txtUserNo";
             this.txtUserNo.Size = new System.Drawing.Size(117, 23);
             this.txtUserNo.TabIndex = 0;
-            this.txtUserNo.TextChanged += new System.EventHandler(this.txtUserNo_TextChanged);
             this.txtUserNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUserNo_KeyPress);
             // 
             // label1
@@ -201,16 +200,16 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // button1
+            // btnSec
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(303, 153);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(70, 31);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Seç";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnSec.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSec.Location = new System.Drawing.Point(303, 153);
+            this.btnSec.Name = "btnSec";
+            this.btnSec.Size = new System.Drawing.Size(70, 31);
+            this.btnSec.TabIndex = 2;
+            this.btnSec.Text = "Seç";
+            this.btnSec.UseVisualStyleBackColor = true;
+            this.btnSec.Click += new System.EventHandler(this.btnSec_Click_1);
             // 
             // cmbPozisyon
             // 
@@ -342,7 +341,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSec);
             this.Controls.Add(this.txtResim);
             this.Controls.Add(this.txtSoyad);
             this.Controls.Add(this.label5);
@@ -383,7 +382,7 @@
         private System.Windows.Forms.TextBox txtResim;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSec;
         private System.Windows.Forms.ComboBox cmbPozisyon;
         private System.Windows.Forms.ComboBox cmbDepartman;
         private System.Windows.Forms.Label label6;
